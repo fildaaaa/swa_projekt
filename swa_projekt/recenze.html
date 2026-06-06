@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recenze - DreamTravel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">DreamTravel</a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="o-nas.html">O nás</a></li>
+                <li><a href="luxusni-dovolene.html">Luxusní dovolené</a></li>
+                <li><a href="evropske-zajezdy.html">Evropské zájezdy</a></li>
+                <li><a href="last-minute.html">Last minute</a></li>
+                <li><a href="recenze.html">Recenze</a></li>
+                <li><a href="kariera.html">Kariéra</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="luxury-intro">
+            <h2>Hodnocení našich klientů</h2>
+            <p>Přečtěte si zkušenosti lidí, kteří s námi již objevili svět. Vaše spokojenost je pro nás největší odměnou.</p>
+        </section>
+
+        <section class="services-grid" id="seznam-recenzi"></section>
+
+        <section class="form-section">
+            <h3>Napište nám vaše hodnocení</h3>
+            <form id="formular-recenze">
+                <div class="form-group">
+                    <label for="jmeno">Vaše jméno:</label>
+                    <input type="text" id="jmeno" required placeholder="Např. Jan Novák">
+                </div>
+                
+                <div class="form-group">
+                    <label for="destinace">Navštívená destinace:</label>
+                    <input type="text" id="destinace" required placeholder="Např. Maledivy">
+                </div>
+
+                <div class="form-group">
+                    <label for="text-recenze">Vaše zkušenost:</label>
+                    <textarea id="text-recenze" rows="4" required placeholder="Jak se vám s námi líbilo?"></textarea>
+                </div>
+
+                <button type="submit" class="btn">Odeslat recenzi</button>
+            </form>
+        </section>
+    </main>
+
+
+
+    <script src="script.js"></script>
+        <script src="data.js"></script>
+</body>
+</html>
