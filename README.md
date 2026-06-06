@@ -9,6 +9,9 @@ Podstránky: Domů
             Last minute nabídky
             Exotické destinace
             Recenze zákazníků
-            Průvodci
-            Školní zájezdy
             Kariéra
+            Maledivy
+            Dubaj
+            Paříž
+            Řím
+            Egypt
