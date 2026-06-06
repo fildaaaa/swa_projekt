@@ -1,7 +1,3 @@
-/**
- * Funkce pro vykreslení karet zájezdů a ostatních položek
- * Pokud položka obsahuje 'url', tlačítko bude fungovat jako odkaz na novou stránku.
- */
 function vykresliKarty(data, containerId, options = {}) {
     const container = document.getElementById(containerId);
     if (!container) return;
@@ -10,11 +6,8 @@ function vykresliKarty(data, containerId, options = {}) {
 
     data.forEach(item => {
         const karta = document.createElement("div");
-        // Použijeme třídu z options nebo výchozí 'card'
         karta.className = options.trida || "card luxury-card";
 
-        // Pokud položka má 'url', vytvoříme odkaz <a>, jinak zůstane tlačítko <button>
-        // (U neklikacích prvků jako recenze tlačítko nepotřebujeme)
         let tlacitkoHTML = "";
         if (options.tlacitko) {
             if (item.url) {
@@ -39,15 +32,8 @@ function vykresliKarty(data, containerId, options = {}) {
     });
 }
 
-// ==========================================================================
-// Vykreslování dat do jednotlivých sekcí webu
-// ==========================================================================
-
-// Katalog zájezdů
 vykresliKarty(zajezdy,           "katalog-zajezdu",             { tlacitko: "Více informací" });
 vykresliKarty(evropskeZajezdy,   "katalog-evropskych-zajezdu",   { tlacitko: "Více informací" });
 vykresliKarty(lastMinuteZajezdy, "katalog-lastminute-zajezdu",   { tlacitko: "Více informací", prefixCena: "akce" });
-
-// Ostatní sekce
 vykresliKarty(recenzeData,       "seznam-recenzi");
 vykresliKarty(karieraData,       "kariera-container",            { tlacitko: "Odpovědět" });
